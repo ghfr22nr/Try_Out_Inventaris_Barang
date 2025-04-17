@@ -1,0 +1,264 @@
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Base Styles */
+:root {
+  --primary-color: #28a745;
+  --primary-hover: #218838;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+  --border-color: #ccc;
+  --text-color: #333;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: var(--dark-color);
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: var(--dark-color);
+}
+
+/* Container Styles */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action Links */
+.action-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}
+
+.action-link.delete {
+  color: #dc3545;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .print-button-container,
+  .action-links {
+    display: none;
+  }
+
+  body {
+    background-color: var(--white);
+    padding: 0;
+  }
+
+  .container2 {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.page-link.current {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Table responsive */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* No data message */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .container2 {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+  }
+}
